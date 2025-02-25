@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWR-APPS-UI-AUTO-COMMONS</title>
+    <script src="./recordForm.js" defer>
+
+    </script>
+    <link rel="stylesheet"
+        href="../../../../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css" />
+    <link rel="stylesheet"
+        href="../../../../node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg" />
+    <link rel="stylesheet" href="./recordForm.css" />
+    <style>
+        /* Add your styling here */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#announcement"></use>
+                        </svg>
+                        <span class="slds-assistive-text">account</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                            <span>Account Record Form</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-grid slds-wrap">
+                <!-- ===================== text ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.Name'>
+                        <div class="slds-form-element" style="width: 97%;">
+                            <label class="slds-form-element__label" for="text-input-id-56">Name</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text" placeholder="Placeholder text…" required=""
+                                    class="slds-input" />
+                                    <lightning-input>
+                                        <div style="color: red;" class='slds-form-element__help'>Please fill the name field</div>
+                                    </lightning-input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== Picklist ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.Rating'>
+                        <div class="slds-form-element" style="width: 97%;">
+                            <label class="slds-form-element__label" for="text-input-id-56">Rating</label>
+                            <div class="custom-picklist-container cpc">
+                                <button style="background-color: white; border: none; width: 100%;" role="combobox"
+                                    type="input"><input type="text" class="filterable-input slds-input"
+                                        placeholder="Select Rating" id='picklist'></button>
+                                        
+                                <ul class="dropdown-list dl slds-card">
+                                    <li title="Hot" class="dropdown-list-item dli" value="Hot"><span
+                                            title='Hot'>Hot</span></li>
+                                    <li title="Warm" class="dropdown-list-item dli" value="Warm"><span
+                                            title='Hot'>Warm</span></li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                            </div>
+                            <lightning-input>
+                                <div style="color: red;" class='slds-form-element__help'>Please fill the rating field</div>       
+                            </lightning-input>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ===================== textarea ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.Summary'>
+                        <div class="slds-form-element" style="width: 97%;">
+                            <label class="slds-form-element__label" for="textarea-id-01">Summary</label>
+                            <div class="slds-form-element__control">
+                                <textarea id="textarea" placeholder="Placeholder text…"
+                                    class="slds-textarea"></textarea>
+                                    <lightning-textarea>
+                                        <div style="color: red;" class='slds-form-element__help'>Please fill the summary field</div>
+                                    </lightning-textarea>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== checkbox ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.Checkbox'>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <div class="slds-checkbox">
+                                    <lightning-input>
+                                        <input type="checkbox" name="options" id="checkbox-unique-id-80"
+                                            value="checkbox-unique-id-80" />
+                                            
+                                        <label class="slds-checkbox__label" for="checkbox-unique-id-80">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-form-element__label">Checkbox</span>
+                                        </label>
+                                        <div style="color: red;" class='slds-form-element__help'>Please check the box</div>
+                                    </lightning-input>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== Address ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.BillingAddress'>
+                        <div class="slds-form-element" style="width: 97%;">
+                            <!-- <div  class="slds-grid slds-size_1-of-1 label-stacked" data-target-selection-name="sfdc:RecordField.Account.BillingAddress"> -->
+                            <span class="test-id__field-value slds-size_1-of-1">
+                                <slot name="inputField">
+                                    <records-record-layout-input-address data-input-element-id="input-field"
+                                        slot="inputField">
+                                        <lightning-input-address
+                                            class="slds-form-element_stacked slds-form-element slds-form_compound">
+                                            <fieldset
+                                                class="slds-form-element slds-form-element_compound slds-form-element_address">
+                                                <legend class="slds-form-element__label slds-form-element__legend">
+                                                    Billing Address
+                                                </legend>
+                                                <div class="slds-form-element__control">
+                                                    <div class="slds-form-element__group">
+                                                        <div class="slds-form-element__row">
+                                                            <lightning-textarea
+                                                                class="slds-form-element slds-show slds-size_6-of-6"
+                                                                data-field="street">
+                                                                <label class="slds-form-element__label"
+                                                                    for="input-716">Billing Street</label>
+                                                                <div
+                                                                    class="slds-form-element__control slds-grow textarea-container">
+                                                                    <textarea class="slds-textarea" id="input-716"
+                                                                        autocomplete="street-address" name="street"
+                                                                        maxlength="255"></textarea>
+                                                                        <div style="color: red;" class='slds-form-element__help'>Please fill the street field</div>
+                                                                </div>
+                                                            </lightning-textarea>
+                                                        </div>
+                                                        <div class="slds-form-element__row">
+                                                            <lightning-input
+                                                                class="slds-form-element slds-show slds-size_6-of-6"
+                                                                data-field="city">
+                                                                <lightning-primitive-input-simple
+                                                                    aria-errormessage="help-message-717"
+                                                                    variant="standard">
+                                                                    <div part="input-text">
+                                                                        <label
+                                                                            class="slds-form-element__label slds-no-flex"
+                                                                            for="input-718" part="label">Billing
+                                                                            City</label>
+                                                                        <div class="slds-form-element__control slds-grow"
+                                                                            part="input-container" type="text">
+                                                                            <input class="slds-input"
+                                                                                aria-errormessage="help-message-718"
+                                                                                autocomplete="address-level2"
+                                                                                id="input-718" maxlength="40"
+                                                                                name="city" part="input" type="text">
+                                                                                <div style="color: red;" class='slds-form-element__help'>Please fill the city field</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </lightning-primitive-input-simple>
+                                                            </lightning-input>
+                                                        </div>
+                                                        <div class="slds-form-element__row">
+                                                            <lightning-input
+                                                                class="slds-form-element slds-show slds-size_4-of-6"
+                                                                data-field="postalCode">
+                                                                <lightning-primitive-input-simple
+                                                                    aria-errormessage="help-message-719"
+                                                                    variant="standard">
+                                                                    <div part="input-text">
+                                                                        <label
+                                                                            class="slds-form-element__label slds-no-flex"
+                                                                            for="input-720" part="label">Billing
+                                                                            Zip/Postal Code</label>
+                                                                        <div class="slds-form-element__control slds-grow"
+                                                                            part="input-container" type="text">
+                                                                            <input class="slds-input"
+                                                                                aria-errormessage="help-message-720"
+                                                                                autocomplete="postal-code"
+                                                                                id="input-720" maxlength="20"
+                                                                                name="postalCode" part="input"
+                                                                                type="text">
+                                                                                <div style="color: red;" class='slds-form-element__help'>Please fill the postal code field</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </lightning-primitive-input-simple>
+                                                            </lightning-input>
+                                                            <lightning-input
+                                                                class="slds-form-element slds-show slds-size_2-of-6"
+                                                                data-field="province">
+                                                                <lightning-primitive-input-simple
+                                                                    aria-errormessage="help-message-721"
+                                                                    variant="standard">
+                                                                    <div part="input-text">
+                                                                        <label
+                                                                            class="slds-form-element__label slds-no-flex"
+                                                                            for="input-722" part="label">Billing
+                                                                            State/Province</label>
+                                                                        <div class="slds-form-element__control slds-grow"
+                                                                            part="input-container" type="text">
+                                                                            <input class="slds-input"
+                                                                                aria-errormessage="help-message-722"
+                                                                                autocomplete="address-level1"
+                                                                                id="input-722" maxlength="80"
+                                                                                name="province" part="input"
+                                                                                type="text">
+                                                                                <div style="color: red;" class='slds-form-element__help'>Please fill the state field</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </lightning-primitive-input-simple>
+                                                            </lightning-input>
+                                                        </div>
+                                                        <div class="slds-form-element__row">
+                                                            <lightning-input
+                                                                class="slds-form-element slds-show slds-size_6-of-6"
+                                                                data-field="country">
+                                                                <lightning-primitive-input-simple
+                                                                    aria-errormessage="help-message-723"
+                                                                    variant="standard">
+                                                                    <div part="input-text">
+                                                                        <label
+                                                                            class="slds-form-element__label slds-no-flex"
+                                                                            for="input-724" part="label">Billing
+                                                                            Country
+                                                                        </label>
+                                                                        <div class="slds-form-element__control slds-grow"
+                                                                            part="input-container" type="text">
+                                                                            <input class="slds-input"
+                                                                                aria-errormessage="help-message-724"
+                                                                                autocomplete="country" id="input-724"
+                                                                                maxlength="80" name="country"
+                                                                                part="input" type="text">
+                                                                                <div style="color: red;" class='slds-form-element__help'>Please fill the country field</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </lightning-primitive-input-simple>
+                                                            </lightning-input>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </lightning-input-address>
+                                    </records-record-layout-input-address>
+                                </slot>
+                            </span>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== Lookup ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div data-target-selection-name='sfdc:RecordField.Account.Lookup'>
+                        <div class="slds-form-element" style="width: 97%;">
+                            <label class="slds-form-element__label" for="text-input-id-56">Lookup</label>
+                            <div class="custom-picklist-container1 cpc">
+                                <input type="text" class="filterable-input1 slds-input" placeholder="Select Rating"
+                                    id='lookup' role='combobox'>
+                                    <div style="color: red;" class='slds-form-element__help'>Please fill the lookup field</div>
+                                <ul class="dropdown-list1 dl slds-card">
+                                    <li title="Lookup 1" class="dropdown-list-item1 dli" value="Lookup 1">
+                                        <lightning-base-combobox-formatted-text title="Lookup 1">Lookup
+                                            1</lightning-base-combobox-formatted-text></li>
+                                    <li title="Lookup 2" class="dropdown-list-item1 dli" value="Lookup 2">
+                                        <lightning-base-combobox-formatted-text title="Lookup 2">Lookup
+                                            2</lightning-base-combobox-formatted-text></li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== Multipicklist ======================== -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div  class="slds-grid slds-size_1-of-1 label-stacked"
+                        data-target-selection-name="sfdc:RecordField.Account.Books"><span 
+                            class="test-id__field-value slds-size_1-of-1">
+                            <slot  name="inputField"><records-record-picklist
+                                    data-input-element-id="input-field" slot="inputField"
+                                    ><records-form-picklist 
+                                        ><lightning-picklist 
+                                            ><lightning-dual-listbox 
+                                                class="slds-form-element_stacked slds-form-element"
+                                                variant="label-stacked" >
+                                                <div  role="group" aria-labelledby="group-label-609"
+                                                    part="dual-listbox">
+                                                    <div 
+                                                        class="slds-form-element__label slds-form-element__legend"
+                                                        id="group-label-609">Books</div>
+                                                    <div  class="slds-form-element__control">
+                                                        <div  class="slds-dueling-list">
+                                                            <div  class="slds-assistive-text"
+                                                                id="assertive-thing-609" aria-live="assertive"></div>
+                                                            <div  class="slds-assistive-text"
+                                                                id="keyboard-interacton-609">Press Ctrl (Cmd on Mac) +
+                                                                Left Arrow or Ctrl (Cmd on Mac) + Right Arrow to move
+                                                                items between lists.</div>
+                                                            <div 
+                                                                class="slds-dueling-list__column slds-dueling-list__column_responsive">
+                                                                <span 
+                                                                    class="slds-form-element__label"
+                                                                    id="source-list-label-609">Available</span>
+                                                                <div 
+                                                                    class="slds-dueling-list__options"
+                                                                    style="height:10rem">
+                                                                    <ul 
+                                                                        class="slds-listbox slds-listbox_vertical"
+                                                                        data-source-list="" id="source-list-609"
+                                                                        aria-describedby="keyboard-interacton-609"
+                                                                        aria-labelledby="source-list-label-609"
+                                                                        aria-multiselectable="true" role="listbox"
+                                                                        part="listbox" aria-disabled="false">
+                                                                        <li 
+                                                                            class="slds-listbox__item"
+                                                                            role="presentation">
+                                                                            <div 
+                                                                                class="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                                                                                aria-selected="false" role="option"
+                                                                                tabindex="0" data-index="0"
+                                                                                data-value="Atmos"><span
+                                                                                    
+                                                                                    class="slds-media__body"><span
+                                                                                        
+                                                                                        class="slds-truncate"
+                                                                                        title="Atmos">Atmos</span></span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li 
+                                                                            class="slds-listbox__item"
+                                                                            role="presentation">
+                                                                            <div 
+                                                                                class="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                                                                                aria-selected="false" role="option"
+                                                                                tabindex="-1" data-index="1"
+                                                                                data-value="Harrey"><span
+                                                                                    
+                                                                                    class="slds-media__body"><span
+                                                                                        
+                                                                                        class="slds-truncate"
+                                                                                        title="Harrey">Harrey</span></span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li 
+                                                                            class="slds-listbox__item"
+                                                                            role="presentation">
+                                                                            <div 
+                                                                                class="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                                                                                aria-selected="false" role="option"
+                                                                                tabindex="-1" data-index="2"
+                                                                                data-value="The Night"><span
+                                                                                    
+                                                                                    class="slds-media__body"><span
+                                                                                        
+                                                                                        class="slds-truncate"
+                                                                                        title="The Night">The
+                                                                                        Night</span></span></div>
+                                                                        </li>
+                                                                        <li 
+                                                                            class="slds-listbox__item"
+                                                                            role="presentation">
+                                                                            <div 
+                                                                                class="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                                                                                aria-selected="false" role="option"
+                                                                                tabindex="-1" data-index="3"
+                                                                                data-value="Cow Boy"><span
+                                                                                    
+                                                                                    class="slds-media__body"><span
+                                                                                        
+                                                                                        class="slds-truncate"
+                                                                                        title="Cow Boy">Cow
+                                                                                        Boy</span></span></div>
+                                                                        </li>
+                                                                        <li 
+                                                                            class="slds-listbox__item"
+                                                                            role="presentation">
+                                                                            <div 
+                                                                                class="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                                                                                aria-selected="false" role="option"
+                                                                                tabindex="-1" data-index="4"
+                                                                                data-value="Kingdom"><span
+                                                                                    
+                                                                                    class="slds-media__body"><span
+                                                                                        
+                                                                                        class="slds-truncate"
+                                                                                        title="Kingdom">Kingdom</span></span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div  class="slds-dueling-list__column">
+                                                                <lightning-button-icon 
+                                                                    variant="container"><button
+                                                                        class="slds-button slds-button_icon slds-button_icon-container"
+                                                                        title="Move selection to Chosen" type="button"
+                                                                        part="button button-icon"><lightning-primitive-icon
+                                                                            variant="bare"><svg
+                                                                                class="slds-button__icon"
+                                                                                focusable="false" data-key="right"
+                                                                                aria-hidden="true" viewBox="0 0 520 520"
+                                                                                part="icon">
+                                                                                <g>
+                                                                                    <path
+                                                                                        d="M140 437V83c0-10 13-17 22-9l212 173c8 6 8 19 0 25L162 447c-9 7-22 1-22-10z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg></lightning-primitive-icon><span
+                                                                            class="slds-assistive-text">Move selection
+                                                                            to
+                                                                            Chosen</span></button></lightning-button-icon><lightning-button-icon
+                                                                     variant="container"><button
+                                                                        class="slds-button slds-button_icon slds-button_icon-container"
+                                                                        title="Move selection to Available"
+                                                                        type="button"
+                                                                        part="button button-icon"><lightning-primitive-icon
+                                                                            variant="bare"><svg
+                                                                                class="slds-button__icon"
+                                                                                focusable="false" data-key="left"
+                                                                                aria-hidden="true" viewBox="0 0 520 520"
+                                                                                part="icon">
+                                                                                <g>
+                                                                                    <path
+                                                                                        d="M380 83v354c0 10-13 17-22 9L146 273c-8-6-8-19 0-25L358 73c9-7 22-1 22 10z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg></lightning-primitive-icon><span
+                                                                            class="slds-assistive-text">Move selection
+                                                                            to
+                                                                            Available</span></button></lightning-button-icon>
+                                                            </div>
+                                                            <div 
+                                                                class="slds-dueling-list__column slds-dueling-list__column_responsive">
+                                                                <span 
+                                                                    class="slds-form-element__label"
+                                                                    id="selected-list-label-609">Chosen</span>
+                                                                <div 
+                                                                    class="slds-dueling-list__options"
+                                                                    style="height:10rem">
+                                                                    <ul 
+                                                                        class="slds-listbox slds-listbox_vertical"
+                                                                        data-selected-list="" id="selected-list-609"
+                                                                        aria-describedby="keyboard-interacton-609"
+                                                                        aria-labelledby="selected-list-label-609"
+                                                                        aria-multiselectable="true" role="listbox"
+                                                                        part="listbox" aria-disabled="false"></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </lightning-dual-listbox></lightning-picklist></records-form-picklist></records-record-picklist>
+                                            <div style="color: red;" class='slds-form-element__help'>Please select value from field</div>
+                            </slot>
+                        </span>
+                        
+                    </div>
+                </div>
+                <!-- =========================== add field here==============================  -->
+            </div>
+    </article>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+</body>
+
+</html>

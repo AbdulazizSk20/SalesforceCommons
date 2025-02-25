@@ -1,0 +1,35 @@
+.slds-input {
+    width: 98%;
+}
+
+/* Style for custom picklist container */
+.cpc {
+position: relative;
+
+}
+
+/* Style for the dropdown list */
+.dl {
+display: none;
+position: absolute;
+border: 1px solid #ccc;
+max-height: 150px;
+overflow-y: auto;
+background-color: #fff;
+width: 100%;
+box-sizing: border-box;
+z-index: 1;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+/* Style for list items in the dropdown */
+.dli {
+padding: 8px;
+cursor: pointer;
+}
+
+.dli:hover {
+background-color: #f0f0f0;
+}

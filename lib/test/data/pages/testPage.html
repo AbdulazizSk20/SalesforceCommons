@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFDC-UI-AUTO-COMMONS</title>
+    </script>
+    <link rel="stylesheet"
+        href="../../../../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css" />
+    <link rel="stylesheet"
+        href="../../../../node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg" />
+    <link rel="stylesheet" href="./recordForm.css" />
+    <style>
+        /* Add your styling here */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                            </svg>
+                            <span class="slds-assistive-text">toster</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                <span>All Salesforce Toster</span>
+                            </a>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <div class="slds-card">
+                    <div class="slds-notify_container slds-is-relative">
+                        <div class="toastContainer slds-notify_container slds-is-relative"
+                            data-aura-rendered-by="2090:0">
+                            <div role="alertdialog" aria-describedby="toastDescription2091:0" data-key="success"
+                                class="slds-theme--success slds-notify--toast slds-notify slds-notify--toast forceToastMessage"
+                                data-aura-rendered-by="2093:0" data-aura-class="forceToastMessage" aria-label="Success">
+                                <lightning-icon icon-name="utility:success"
+                                    class="slds-icon-utility-success toastIcon slds-m-right--small slds-no-flex slds-align-top slds-icon_container"
+                                    data-data-rendering-service-uid="552" data-aura-rendered-by="2095:0"><span
+                                        style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)"
+                                        part="boundary"><lightning-primitive-icon size="small" variant="inverse"><svg
+                                                class="slds-icon slds-icon_small" focusable="false" data-key="success"
+                                                aria-hidden="true" viewBox="0 0 520 520" part="icon">
+                                                <g>
+                                                    <path
+                                                        d="M260 20a240 240 0 100 480 240 240 0 100-480zm134 180L241 355c-6 6-16 6-22 0l-84-85c-6-6-6-16 0-22l22-22c6-6 16-6 22 0l44 45a10 10 0 0015 0l112-116c6-6 16-6 22 0l22 22c7 6 7 16 0 23z">
+                                                    </path>
+                                                </g>
+                                            </svg></lightning-primitive-icon><span
+                                            class="slds-assistive-text">Success</span></span></lightning-icon>
+                                <div class="toastContent slds-notify__content" data-aura-rendered-by="2096:0">
+                                    <div class="slds-align-middle slds-hyphenate" data-aura-rendered-by="2097:0">
+                                        <!--render facet: 2098:0-->
+                                        <div class="toastTitle slds-text-heading--small">Welcome to our TDD</div>
+                                        <div id="toastDescription2091:0" data-aura-rendered-by="2099:0"><span
+                                                class="toastMessage slds-text-heading--small forceActionsText"
+                                                data-aura-rendered-by="2104:0"
+                                                data-aura-class="forceActionsText">Account
+                                                "Shubham Navale" was created.</span></div>
+                                    </div>
+                                </div><button type="button" title="Close"
+                                    class="slds-button slds-button_icon toastClose slds-notify__close slds-button--icon-inverse slds-button_icon-bare"
+                                    data-aura-rendered-by="2121:0"><lightning-primitive-icon variant="bare"
+                                        data-aura-rendered-by="2122:0"><svg
+                                            class="slds-button__icon slds-button__icon--large" focusable="false"
+                                            data-key="close" aria-hidden="true" viewBox="0 0 520 520" part="icon">
+                                            <g>
+                                                <path
+                                                    d="M310 254l130-131c6-6 6-15 0-21l-20-21c-6-6-15-6-21 0L268 212a10 10 0 01-14 0L123 80c-6-6-15-6-21 0l-21 21c-6 6-6 15 0 21l131 131c4 4 4 10 0 14L80 399c-6 6-6 15 0 21l21 21c6 6 15 6 21 0l131-131a10 10 0 0114 0l131 131c6 6 15 6 21 0l21-21c6-6 6-15 0-21L310 268a10 10 0 010-14z">
+                                                </path>
+                                            </g>
+                                        </svg></lightning-primitive-icon><span class="slds-assistive-text"
+                                        data-aura-rendered-by="2124:0">Close</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-card">
+                        <div class="slds-notify_container slds-is-relative">
+                            <div class="toastContainer slds-notify_container slds-is-relative"
+                                data-aura-rendered-by="2090:0">
+                                <div role="alertdialog" aria-describedby="toastDescription2091:0" data-key="warning"
+                                    class="slds-theme--warning slds-notify--toast slds-notify slds-notify--toast forceToastMessage"
+                                    data-aura-rendered-by="2093:0" data-aura-class="forceToastMessage"
+                                    aria-label="Warning">
+                                    <lightning-icon icon-name="utility:warning"
+                                        class="slds-icon-utility-warning toastIcon slds-m-right--small slds-no-flex slds-align-top slds-icon_container"
+                                        data-data-rendering-service-uid="552" data-aura-rendered-by="2095:0"><span
+                                            style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)"
+                                            part="boundary"><lightning-primitive-icon size="small"
+                                                variant="inverse"><svg class="slds-icon slds-icon_small"
+                                                    focusable="false" data-key="warning" aria-hidden="true"
+                                                    viewBox="0 0 520 520" part="icon">
+                                                    <g>
+                                                        <path
+                                                            d="M260 20a240 240 0 100 480 240 240 0 100-480zm134 180L241 355c-6 6-16 6-22 0l-84-85c-6-6-6-16 0-22l22-22c6-6 16-6 22 0l44 45a10 10 0 0015 0l112-116c6-6 16-6 22 0l22 22c7 6 7 16 0 23z">
+                                                        </path>
+                                                    </g>
+                                                </svg></lightning-primitive-icon><span
+                                                class="slds-assistive-text">warning</span></span></lightning-icon>
+                                    <div class="toastContent slds-notify__content" data-aura-rendered-by="2096:0">
+                                        <div class="slds-align-middle slds-hyphenate" data-aura-rendered-by="2097:0">
+                                            <!--render facet: 2098:0-->
+                                            <div id="toastDescription2091:0" data-aura-rendered-by="2099:0"><span
+                                                    class="toastMessage slds-text-heading--small forceActionsText"
+                                                    data-aura-rendered-by="2104:0"
+                                                    data-aura-class="forceActionsText">Account
+                                                    "Shubham Navale" was created and it's already exist.</span></div>
+                                        </div>
+                                    </div><button type="button" title="Close"
+                                        class="slds-button slds-button_icon toastClose slds-notify__close slds-button--icon-inverse slds-button_icon-bare"
+                                        data-aura-rendered-by="2121:0"><lightning-primitive-icon variant="bare"
+                                            data-aura-rendered-by="2122:0"><svg
+                                                class="slds-button__icon slds-button__icon--large" focusable="false"
+                                                data-key="close" aria-hidden="true" viewBox="0 0 520 520" part="icon">
+                                                <g>
+                                                    <path
+                                                        d="M310 254l130-131c6-6 6-15 0-21l-20-21c-6-6-15-6-21 0L268 212a10 10 0 01-14 0L123 80c-6-6-15-6-21 0l-21 21c-6 6-6 15 0 21l131 131c4 4 4 10 0 14L80 399c-6 6-6 15 0 21l21 21c6 6 15 6 21 0l131-131a10 10 0 0114 0l131 131c6 6 15 6 21 0l21-21c6-6 6-15 0-21L310 268a10 10 0 010-14z">
+                                                    </path>
+                                                </g>
+                                            </svg></lightning-primitive-icon><span class="slds-assistive-text"
+                                            data-aura-rendered-by="2124:0">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-card">
+                            <div class="slds-notify_container slds-is-relative">
+                                <div class="toastContainer slds-notify_container slds-is-relative"
+                                    data-aura-rendered-by="2090:0">
+                                    <div role="alertdialog" aria-describedby="toastDescription2091:0" data-key="error"
+                                        class="slds-theme--error slds-notify--toast slds-notify slds-notify--toast forceToastMessage"
+                                        data-aura-rendered-by="2093:0" data-aura-class="forceToastMessage"
+                                        aria-label="Error">
+                                        <lightning-icon icon-name="utility:error"
+                                            class="slds-icon-utility-error toastIcon slds-m-right--small slds-no-flex slds-align-top slds-icon_container"
+                                            data-data-rendering-service-uid="552" data-aura-rendered-by="2095:0"><span
+                                                style="--sds-c-icon-color-background: var(--slds-c-icon-color-background, transparent)"
+                                                part="boundary"><lightning-primitive-icon size="small"
+                                                    variant="inverse"><svg class="slds-icon slds-icon_small"
+                                                        focusable="false" data-key="error" aria-hidden="true"
+                                                        viewBox="0 0 520 520" part="icon">
+
+                                                    </svg></lightning-primitive-icon><span
+                                                    class="slds-assistive-text">error</span></span></lightning-icon>
+                                        <div class="toastContent slds-notify__content" data-aura-rendered-by="2096:0">
+                                            <div class="slds-align-middle slds-hyphenate"
+                                                data-aura-rendered-by="2097:0">
+                                                <!--render facet: 2098:0-->
+                                                <div id="toastDescription2091:0" data-aura-rendered-by="2099:0"><span
+                                                        class="toastMessage slds-text-heading--small forceActionsText"
+                                                        data-aura-rendered-by="2104:0"
+                                                        data-aura-class="forceActionsText">Error while creating Account
+                                                        "Shubham Navale".</span></div>
+                                            </div>
+                                        </div><button type="button" title="Close"
+                                            class="slds-button slds-button_icon toastClose slds-notify__close slds-button--icon-inverse slds-button_icon-bare"
+                                            data-aura-rendered-by="2121:0"><lightning-primitive-icon variant="bare"
+                                                data-aura-rendered-by="2122:0"><svg
+                                                    class="slds-button__icon slds-button__icon--large" focusable="false"
+                                                    data-key="close" aria-hidden="true" viewBox="0 0 520 520"
+                                                    part="icon">
+                                                    <g>
+                                                        <path
+                                                            d="M310 254l130-131c6-6 6-15 0-21l-20-21c-6-6-15-6-21 0L268 212a10 10 0 01-14 0L123 80c-6-6-15-6-21 0l-21 21c-6 6-6 15 0 21l131 131c4 4 4 10 0 14L80 399c-6 6-6 15 0 21l21 21c6 6 15 6 21 0l131-131a10 10 0 0114 0l131 131c6 6 15 6 21 0l21-21c6-6 6-15 0-21L310 268a10 10 0 010-14z">
+                                                        </path>
+                                                    </g>
+                                                </svg></lightning-primitive-icon><span class="slds-assistive-text"
+                                                data-aura-rendered-by="2124:0">Close</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </article>
+    </div>
+<br>
+    <div>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                            </svg>
+                            <span class="slds-assistive-text">account</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <a href="#" class="slds-card__header-link slds-truncate"
+                                title="Validation on ABX Field in salesforce">
+                                <span>Validation on ABX Field in salesforce</span>
+                            </a>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div>
+                            <abx-field >
+                                <div 
+                                    class="slds-form-element slds-has-error">
+                                    <label class="slds-form-element__label slds-m-right_small" title="Name" for="Name">
+                                        Name
+                                    </label>
+                                    <div  class="slds-form-element__control">
+                                        <div >
+                                            <div  class="abx-placeholder field-inline-edit">
+                                                    <input  type="text"
+                                                        class="slds-input ng-valid ng-touched ng-dirty"
+                                                        placeholder="Enter Name" name="Name"
+                                                        id="id_166851741562311">
+                                                <div style="color: red;" class='slds-form-element__help'>Please fill the name field</div>
+                                            </div>   
+                                        </div>
+                                    </div>   
+                                </div>
+                            </abx-field>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div>
+                            <abx-field >
+                                <div 
+                                    class="slds-form-element slds-has-error">
+                                    <label class="slds-form-element__label slds-m-right_small" title="Date" for="Date">
+                                        Date
+                                    </label>
+                                    <div  class="slds-form-element__control">
+                                        <div>
+                                            <div  class="abx-placeholder field-inline-edit">
+                                                    <input  type="text"
+                                                        class="slds-input ng-valid ng-touched ng-dirty"
+                                                        placeholder="Enter Name" name="Name"
+                                                        id="id_166851741562311">
+                                                <div style="color: red;" class='slds-form-element__help'>Please fill the date field</div>
+                                            </div>   
+                                        </div>
+                                    </div>   
+                                </div>
+                            </abx-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{
+    "name": "@orektic/sfdc-ui-auto-commons",
+    "version": "1.0.0",
+    "description": "Shared helpers and steps for all projects of pwr-apps",
+    "scripts": {
+        "test": "mocha --require ts-node/register ./**/*spec.ts --timeout 60000 --exit",
+        "build": "tsc && node postbuild.js"
+    },
+    "author": "ajaysinh.chauhan@orektic.com",
+    "license": "ISC",
+    "dependencies": {
+        "@cucumber/cucumber": "^7.3.2",
+        "@google-cloud/local-auth": "^3.0.0",
+        "@orektic/abx-models": "https://app-qa.nokodr.com/super/modules/abx-models/v1/lib.tgz",
+        "@orektic/sfdc-sdk": "https://app-qa.nokodr.com/super/modules/sfdc-sdk/v1/lib.tgz",
+        "@orektic/ui-auto-framework": "https://app-qa.nokodr.com/super/modules/ui-auto-framework/v1/lib.tgz",
+        "@types/chai": "^4.2.21",
+        "@types/cucumber": "^7.0.0",
+        "@types/ini": "^1.3.30",
+        "@types/lodash": "^4.14.171",
+        "@types/node": "^16.4.3",
+        "@types/mocha": "^10.0.6",
+        "@types/selenium-webdriver": "^4.0.12",
+        "@types/xlsx": "^0.0.35",
+        "@salesforce-ux/design-system": "^2.23.2",
+        "axios": "^1.4.0",
+        "chai": "^4.3.4",
+        "cheerio": "^1.0.0-rc.12",
+        "class-transformer": "^0.5.1",
+        "crypto": "^1.0.1",
+        "crypto-ts": "^1.0.2",
+        "cucumber-console-formatter": "^1.0.0",
+        "cucumber-pretty": "^6.0.0",
+        "cucumber-tsflow": "^4.0.0-rc.1",
+        "geckodriver": "^4.3.0",
+        "googleapis": "^126.0.1",
+        "import-cwd": "^3.0.0",
+        "selenium-webdriver": "^4.0.0-beta.4",
+        "ts-node": "^10.1.0",
+        "typescript": "^4.3.5",
+        "xlsx": "^0.17.0",
+        "mocha": "^10.2.0",
+        "eventemitter3": "^5.0.1"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.6"
+    }
+}

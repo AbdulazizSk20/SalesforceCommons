@@ -1,0 +1,85 @@
+{
+    "data":{
+          "text": {
+            "fieldName": "Account.Name",
+            "value": "Shubham Navale",
+            "validation":"Please fill the name field"
+          },
+          "picklist": {
+            "fieldName": "Account.Rating",
+            "value": "Hot",
+            "validation":"Please fill the rating field"
+          },
+          "textarea": {
+            "fieldName": "Account.Summary",
+            "value": "Hello, how are you?",
+            "validation":"Please fill the summary field"
+          },
+          "checkbox": {
+            "fieldName": "Account.Checkbox",
+            "value": "true",
+            "validation":"Please check the box"
+          },
+          "address": {
+            "fieldName": "Account.BillingAddress",
+            "countryValue": "India",
+            "postalCodeValue": "431136",
+            "stateValue": "Maharashtra",
+            "cityValue": "Sambhaji Nagar",
+            "streetValue": "Sinhagad Socity RX-15",
+            "countryValidation":"Please fill the country field",
+            "postalCodeValidation":"Please fill the postal code field",
+            "stateValidation":"Please fill the state field",
+            "cityValidation":"Please fill the city field",
+            "streetValidation":"Please fill the street field"
+          },
+          "lookup": {
+            "fieldName": "Account.Lookup",
+            "value":"Lookup 1",
+            "validation":"Please fill the lookup field"
+          },
+          "multipicklist": {
+            "fieldName": "Account.Books",
+            "choiceValue": "Available",
+            "value": "Atmos,Harrey,The Night",
+            "validation":"Please select value from field"
+          },
+          "abxName":{
+            "fieldName": "Name",
+            "validation":"Please fill the name field"
+          },
+          "abxDate":{
+            "fieldName": "Date",
+            "validation":"Please fill the date field"
+          }
+    },
+    "xpath":{
+      "text": "//input[@id='text']",
+      "picklist": "//input[@id='picklist']",
+      "textarea": "//textarea[@id='textarea']",
+      "checkbox": "//input[@id='checkbox-unique-id-80']",
+      "address": {
+        "countryXpath": "//input[@name='country']",
+        "postalCodeXpath": "//input[@name='postalCode']",
+        "stateXpath": "//input[@name='province']",
+        "cityXpath": "//input[@name='city']",
+        "streetXpath": "//textarea[@name='street']"
+      },
+      "lookup": "//input[@id='lookup']"
+    },
+    "tostMessage":{
+      "success":{
+        "varient":"Success",
+        "message":"Account \"Shubham Navale\" was created."
+      },
+      "warning":{
+        "varient":"Warning",
+        "message":"Account \"Shubham Navale\" was created and it's already exist."
+      },
+      "error":{
+        "varient":"Error",
+        "message":"Error while creating Account \"Shubham Navale\"."
+      },
+      "headMessage":"Welcome to our TDD"
+    }
+}
